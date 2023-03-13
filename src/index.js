@@ -2,16 +2,38 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Tolgee, DevTools, TolgeeProvider, FormatSimple } from "@tolgee/react";
+
+const tolgee = Tolgee()
+  .use(DevTools())
+  .use(FormatSimple())
+  .init({
+    language: 'en',
+
+    // for development
+    apiUrl: process.env.REACT_APP_TOLGEE_API_URL,
+    apiKey: process.env.REACT_APP_TOLGEE_API_KEY,
+
+    // for production
+    staticData : {
+      en: () => import('./texts/en.json'),
+      ch: () => import('./texts/ch.json'),
+    }
+  });
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <TolgeeProvider
+        tolgee={tolgee}       
+        fallback="Loading..." 
+    >
+      <App />
+    </TolgeeProvider>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

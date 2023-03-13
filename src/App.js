@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { init } from "./utilis/aircraftLayer";
+import { useEffect } from "react"
+
+import NavBar from "./components/navBar";
+import Main from "./components/main"
+
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ColorModeContext, useMode } from "./theme";
+
+import {T, } from "@tolgee/react"
 
 function App() {
+  const [theme, colorMode] = useMode();
+
+  useEffect(() => {
+    init()
+  }, [])
+  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div className= {theme.palette.mode==='light' ? 'light' : 'dark'}>
+          <NavBar />
+          <Main />
+        </div>
+        </ThemeProvider>
+     </ColorModeContext.Provider>
+    
   );
 }
 
