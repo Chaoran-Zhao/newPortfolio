@@ -22,7 +22,7 @@ h4{
 }
 
 :root {
-    --color-primary:#4cceac;
+    --color-primary:#457b9d;
     --transition: all 400ms ease;
 }
 
@@ -72,10 +72,12 @@ header{
 }
 #off{
   color: #f50057;
+  font-weight: 1100;
 }
 #on{
   display: none;
-  color: #4cceac;
+  color: #457b9d;
+  font-weight: 1100;
 }
 
 
@@ -86,7 +88,7 @@ header{
 
 }
 
-#tsparticles {
+#tsparticles  {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -95,4 +97,7 @@ header{
   left: 0;
   top: 0;
   z-index: -1;
+}
+#tsparticles > canvas {
+  margin-top: 80px;
 }

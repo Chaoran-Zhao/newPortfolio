@@ -40,7 +40,7 @@ function App() {
       if(soundState === 'off'){
           on.style.display = 'block';
           off.style.display = 'none';
-          soundCloud.style.color = "#08fdd8";
+          soundCloud.style.color = "#457b9d";
           await myAudio.play();
       }
       else if(soundState === 'on'){

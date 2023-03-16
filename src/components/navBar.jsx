@@ -25,6 +25,7 @@ const NavBar = () => {
       alignItems="center"
       p={2}
       className= {theme.palette.mode==='light' ? 'navBar_light ' : 'navBar_dark '}
+      style={{height:'80px'}}
     >
 
       <Box

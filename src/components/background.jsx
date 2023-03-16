@@ -6,7 +6,7 @@ import { loadFull } from "tsparticles";
 import { ColorModeContext, tokens } from "../theme";
 import { useTheme,  } from "@mui/material";
 import links from "../preset/links"
-import links_dark from '../preset/links_dark'
+
 
 const Background = () => {
   const theme = useTheme();
@@ -26,11 +26,84 @@ const Background = () => {
       await console.log(container);
   }, []);
 
+
   return (
     <Particles id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
-      options={theme.palette.mode==='light' ? links : links_dark} 
+      options={{
+      background: {
+        color: {
+            value: '#000',
+        },
+        opacity: 0.1,
+  },
+  fpsLimit: 30,
+  interactivity: {
+      events: {
+          onClick: {
+              enable: true,
+              mode: "push",
+          },
+          onHover: {
+              enable: true,
+              mode: "repulse",
+          },
+          resize: true,
+      },
+      modes: {
+          push: {
+              quantity: 4,
+          },
+          repulse: {
+              distance: 200,
+              duration: 0.4,
+          },
+      },
+  },
+  particles: {
+      color: {
+          value: theme.palette.mode==="light" ? colors.primary[500] : "#fcfcfc",
+      },
+      links: {
+          color: theme.palette.mode==="light" ? colors.primary[500]: "#fcfcfc",
+          distance: 150,
+          enable: true,
+          opacity: 0.7,
+          width: 1,
+      },
+      collisions: {
+          enable: true,
+      },
+      move: {
+          directions: "none",
+          enable: true,
+          outModes: {
+              default: "bounce",
+          },
+          random: false,
+          speed: 6,
+          straight: false,
+      },
+      number: {
+          density: {
+              enable: true,
+              area: 800,
+          },
+          value: 80,
+      },
+      opacity: {
+          value: 0.5,
+      },
+      shape: {
+          type: "circle",
+      },
+      size: {
+          value: { min: 1, max: 5 },
+      },
+  },
+  detectRetina: true,
+}} 
       />
   )
 }
