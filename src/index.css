@@ -11,3 +11,88 @@ canvas {
   z-index: -1;
 }
 
+h1{
+  font-size: 2.5rem;
+}
+h3{
+  font-size: 2rem;
+}
+h4{
+  font-size: 1.5rem;
+}
+
+:root {
+    --color-primary:#4cceac;
+    --transition: all 400ms ease;
+}
+
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: 1.5rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+  h4{
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Sound track button */
+header{
+  width: 95%;
+  height: 10vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  position: absolute;
+  top: 85%;
+  left: 5%;
+}
+#sound{
+  padding: 7px;
+  background-color: #1b1b1b;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.sound-cloud{
+  font-size: 1.2rem;
+  margin: 7px;
+  color: #f50057;
+}
+.on-off{
+  cursor: pointer;
+  margin-left: 5px;
+}
+#off{
+  color: #f50057;
+}
+#on{
+  display: none;
+  color: #4cceac;
+}
+
+
+
+#techSphereCanvas {
+  top: 500px !important;
+  z-index: 10;
+
+}
+
+#tsparticles {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}

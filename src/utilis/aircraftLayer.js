@@ -21,7 +21,7 @@ export function init() {
     const light = new THREE.AmbientLight( 0xffffff,1);
     scene.add(light)
 
-    let dlight = new THREE.DirectionalLight(0xFFD700, 1);
+    let dlight = new THREE.DirectionalLight(0xFDFDFD, 1.2);
     dlight.position.setScalar(10);
     scene.add(dlight);
 
@@ -63,10 +63,9 @@ export function init() {
         gsap.to(model.position, {
             delay: 1,
             duration: 1,
-            x: .35,
-            y: .3
+            x: window.innerWidth < 500 ? 0.22 : 0.28,
+            y: .45
         })
-
         scene.add(model)
     })
 
@@ -79,9 +78,7 @@ export function init() {
 
 // animation
 function animation( time ) {
-
     // if (scene) {
-    //     scene.rotation.x += 0.01;
     //     scene.rotation.z += 0.01;
     // }
 	renderer.render( scene, camera );

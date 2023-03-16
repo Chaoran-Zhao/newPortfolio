@@ -26,42 +26,47 @@ const NavBar = () => {
       p={2}
       className= {theme.palette.mode==='light' ? 'navBar_light ' : 'navBar_dark '}
     >
+
       <Box
         display="flex"
         flex={1}
         alignItems="center"
       >
-        <img className="logo" src={Logo} alt="Logo" title="dark logo" />
+        <img className="logo" src={Logo} alt="Logo" title="dark logo" style={{display: window.innerWidth <500 ?'none' : 'flex'}}/>
         
       </Box>
-      <Box display="flex" flex={6} justifyContent="center">
+
+      <Box display="flex" flex={10} justifyContent="center">
         <Button
-          style={{ color: colors.primary[100], fontSize: "1rem" }}
+          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
           className="tab"
         >
           <T keyName="nav_about" />
         </Button>
         <Button
-          style={{ color: colors.primary[100], fontSize: "1rem" }}
+          style={{ color: colors.primary[100],fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
           className="tab"
         >
           <T keyName="nav_projects" />
         </Button>
         <Button
-          style={{ color: colors.primary[100], fontSize: "1rem" }}
+          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem"  }}
           className="tab"
         >
           <T keyName="nav_interests" />
         </Button>
         <Button
-          style={{ color: colors.primary[100], fontSize: "1rem" }}
+          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem"  }}
           className="tab"
         >
           <T keyName="nav_resume" />
         </Button>
       </Box>
 
-      <Box display="flex" flex={1} justifyContent="flex-end">
+      <Box display="flex" 
+        flex={1} 
+        justifyContent="flex-end"
+        >
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (
             <DarkModeOutlinedIcon />

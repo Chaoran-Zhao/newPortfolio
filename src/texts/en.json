@@ -3,5 +3,13 @@
   "nav_projects" : "Projects",
   "nav_resume" : "Resume",
   "nav_interests" : "Interests",
-  "myName" : "Chaoran Zhao"
+  "myName" : "Chaoran Zhao",
+  "description" : "Frontend Developer and Growing Fullstack Developer",
+  "bachelor" : "Bachelor of Aerospace Engineering (Honours)",
+  "master" : "Master of Information Technology",
+  "bachelor1" : "Graduated with Honors Class 1",
+  "bachelor2" : " Included in UNSW Engineering Dean's Honours List in 2019 and 2020",
+  "master1" : "Graduated with Excellence",
+  "master2" : "Received Australia's Global University Award PUCA1026",
+  "sound" : "Sound"
 }
