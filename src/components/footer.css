@@ -1,0 +1,7 @@
+.sentence {
+    text-align: center;
+    transform: translate(0%,10%);
+    font-weight: bold;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}

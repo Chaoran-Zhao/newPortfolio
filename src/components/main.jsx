@@ -1,5 +1,6 @@
 import React from 'react'
 import MovingComponent from 'react-moving-text'
+import { TextLoop } from "react-text-loop-next";
 
 import Social from './Social'
 import { T } from "@tolgee/react"
@@ -25,13 +26,23 @@ const Main = () => {
               fillMode="none">
               <h1 className='my-name title'><T keyName="myName" /></h1>
             </MovingComponent>
-            <h4><T keyName='description' /></h4>
+            <TextLoop
+  children={[
+    "Trade faster",
+    "Increase sales",
+    "Stock winners",
+    "Price perfectly",
+  ]}
+/>
+            
+
+            <h4 style={{color: "#457b9d"}}><T keyName='description' /></h4>
             <Social />
           </div>       
           <div className='planeContainer'></div>
         </div>
         
-        <div className='about-me' style={{marginTop: window.innerWidth < 600 ? '1rem' :'5rem'}}>
+        {/* <div className='about-me' style={{marginTop: window.innerWidth < 600 ? '1rem' :'5rem'}}>
           <div className='Education'>
             <div className='about_Container'>
               <div className='imageContainer'>
@@ -57,7 +68,7 @@ const Main = () => {
         </div>
 
         <TechStack />
-        <TechSphere />
+        <TechSphere /> */}
 
       </div>
     </div>

@@ -2,6 +2,7 @@ import { init } from "./utilis/aircraftLayer";
 import { useEffect, useCallback } from "react"
 
 import NavBar from "./components/navBar";
+import Footer from "./components/footer";
 import Main from "./components/main";
 import TechSphere from "./components/techSphere";
 import Background from "./components/background";
@@ -81,6 +82,7 @@ function App() {
           
         </div>
         
+        <Footer />
         </ThemeProvider>
      </ColorModeContext.Provider>
     

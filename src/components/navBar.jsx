@@ -42,6 +42,12 @@ const NavBar = () => {
           style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
           className="tab"
         >
+          <T keyName="nav_home" />
+        </Button>
+        <Button
+          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
+          className="tab"
+        >
           <T keyName="nav_about" />
         </Button>
         <Button
