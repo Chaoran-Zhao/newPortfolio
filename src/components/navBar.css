@@ -1,6 +1,7 @@
 .logo {
   border-radius: 50%;
   width: 60px;
+  cursor: pointer;
 }
 .navBar_light {
   background-image: url('../assets/background.png');
@@ -10,4 +11,12 @@
 .navBar_dark{
   background-image: url('../assets/fabric.png');
   box-shadow: 0 13px 27px -5px hsla(240, 9%, 93%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03); 
+}
+
+.tab{
+  font-weight: 600 !important;
+}
+.tab-click{
+  color: #457b9d !important;
+  font-weight: 600 !important;
 }

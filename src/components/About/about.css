@@ -1,0 +1,67 @@
+.about_Container {
+    display: flex;
+    width: 100%;
+    gap: 5%;
+}
+
+.imageContainer {
+    display: flex;
+}
+.edu {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+
+.title {
+    font-family: "Space Grotesk, sans-serif";
+}
+.icons {
+    margin-top: 1rem;
+    margin-right: 10px;
+    font-size: 1.8rem;
+}
+.icons:hover {
+    transform: scale(1.1);
+    box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12), 0 8px 32px -8px hsla(0, 0%, 0%, 0.14), 0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
+}
+
+
+
+.tech-icon {
+    width: 25px ;
+    display: inline-block;
+    vertical-align: middle;
+}
+.languages{
+    padding-top: 1%;
+}
+.framework, .techBox {
+    display: none;
+    padding-top: 1%;
+}
+.btn3 {
+    width:max-content;
+    display: inline-block;
+    padding: 0.1rem 0.1rem;
+    border-radius: 0.4rem;
+    transition: var(--transition);
+    margin-right: 5px;
+    border: 2px solid var(--color-primary);
+}
+.btn22 {
+    background: var(--color-primary);
+    width:max-content;
+    display: inline-block;
+    color: white;
+    padding: 0.2rem 0.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-right: 5px;
+}

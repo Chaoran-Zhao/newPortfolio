@@ -1,10 +1,14 @@
-import { init } from "./utilis/aircraftLayer";
 import { useEffect, useCallback } from "react"
+import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
 
 import NavBar from "./components/navBar";
 import Footer from "./components/footer";
 import Main from "./components/main";
-import TechSphere from "./components/techSphere";
+import About from "./components/About/About";
+import Projects from "./components/Proj/Projects";
+import Interests from "./components/Interests/Interests";
+import Resume from "./components/Resume/resume";
+
 import Background from "./components/background";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -15,17 +19,9 @@ import {T, } from "@tolgee/react"
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 
 
-
-
-
 function App() {
   // color mode
   const [theme, colorMode] = useMode();
-
-  // aircraft model
-  useEffect(() => {
-    init()
-  }, [])
 
   //  draggable soundtrack display menu
   const Draggable = require('react-draggable');
@@ -58,7 +54,7 @@ function App() {
      <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Background />
+        
         <header>
           <Draggable>
             <div id="sound">
@@ -72,17 +68,22 @@ function App() {
                   <span id="on" onClick={()=>{soundTrack('on')}}>On</span>
               </div>
             </div> 
-          </Draggable>
-          
+          </Draggable>        
         </header>
 
         <div className= {theme.palette.mode==='light' ? 'light' : 'dark'}>
           <NavBar />
-          <Main />
-          
+          <Routes>
+            <Route path="/" element={ <> <Background /> <Main /> </>} />
+            <Route path="/about" element={ <About />} />
+            <Route path="/projects" element={ <Projects />} />
+            <Route path="/interests" element={ <Interests />} />
+            <Route path="/resume" element={ <Resume />} />
+          </Routes>      
+          <Footer /> 
         </div>
+
         
-        <Footer />
         </ThemeProvider>
      </ColorModeContext.Provider>
     

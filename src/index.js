@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import { Tolgee, DevTools, TolgeeProvider, FormatSimple } from "@tolgee/react";
@@ -31,7 +32,10 @@ root.render(
         tolgee={tolgee}       
         fallback="Loading..." 
     >
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+      
     </TolgeeProvider>
   </React.StrictMode>
 );

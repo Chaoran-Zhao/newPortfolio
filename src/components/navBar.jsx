@@ -1,4 +1,6 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { ColorModeContext, tokens } from "../theme";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -16,7 +18,11 @@ const NavBar = () => {
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
 
+  const [current, setCurrent] = useState('home')
+
   const tolgee = useTolgee(['language']);
+
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -33,38 +39,54 @@ const NavBar = () => {
         flex={1}
         alignItems="center"
       >
-        <img className="logo" src={Logo} alt="Logo" title="dark logo" style={{display: window.innerWidth <500 ?'none' : 'flex'}}/>
+        <Button style={{display: window.innerWidth <500 ?'none' : 'flex'}} onClick={() => {navigate("/"); setCurrent('home')}}>
+          <img className="logo" src={Logo} alt="Logo" title="home"  />
+        </Button>
+        
         
       </Box>
 
       <Box display="flex" flex={10} justifyContent="center">
-        <Button
+        {/* <Button
           style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
-          className="tab"
+          className= {current==='home' ? "tab-click" : 'tab'}
+          id="tabhome"
+          onClick={() => {navigate("/"); setCurrent('home')}}
         >
           <T keyName="nav_home" />
-        </Button>
+        </Button> */}
         <Button
           style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
-          className="tab"
+          className= {current==='about' ? "tab-click" : 'tab'}
+          id="tababout"
+          onClick={() => {navigate("/about");setCurrent('about')}}
         >
           <T keyName="nav_about" />
         </Button>
         <Button
           style={{ color: colors.primary[100],fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
-          className="tab"
+          className= {current==='projects' ? "tab-click" : 'tab'}
+          id="tabprojects"
+          onClick={() => {navigate("/projects");setCurrent('projects')}}
         >
           <T keyName="nav_projects" />
         </Button>
         <Button
           style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem"  }}
-          className="tab"
+          className= {current==='interests' ? "tab-click" : 'tab'}
+          id="tabinterests"
+          onClick={() => {navigate("/interests");setCurrent('interests')}}
         >
           <T keyName="nav_interests" />
         </Button>
         <Button
-          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem"  }}
-          className="tab"
+          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem"   }}
+          className= {current==='resume' ? "tab-click" : 'tab'}
+          id="tabresume"
+          onClick={() => {
+            navigate("/resume"); 
+            setCurrent('resume')
+          }}
         >
           <T keyName="nav_resume" />
         </Button>

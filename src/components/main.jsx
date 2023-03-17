@@ -1,21 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
 import MovingComponent from 'react-moving-text'
-import { TextLoop } from "react-text-loop-next";
+import Typing from 'react-typing-animation';
+
 
 import Social from './Social'
 import { T } from "@tolgee/react"
 import './main.css'
-import { UNSW } from '../assets'
-import TechStack from './techStack'
-import TechSphere from './techSphere'
+
+
+import { init } from "../utilis/aircraftLayer";
 
 const Main = () => {
+  // aircraft model
+  useEffect(() => {
+    init()
+  }, [])
+
+  
+
   return (
     <div className='main'>
       <div className='main-content'>
         <div className='upper'>
           <div>
-            <h3 className='hello'>Hello! I'm </h3>
+            <h3 className='hello'>Hey! This is </h3>
             <MovingComponent
               type="bounce"
               duration="1000ms"
@@ -26,49 +35,32 @@ const Main = () => {
               fillMode="none">
               <h1 className='my-name title'><T keyName="myName" /></h1>
             </MovingComponent>
-            <TextLoop
-  children={[
-    "Trade faster",
-    "Increase sales",
-    "Stock winners",
-    "Price perfectly",
-  ]}
-/>
-            
-
-            <h4 style={{color: "#457b9d"}}><T keyName='description' /></h4>
+            <div>
+              <h4 style={{color: "#457b9d"}}>
+                I'm A
+              <Typing loop='true'>
+                <Typing.Speed ms={80} />
+                <span>Full Stack Web Developer</span>
+                <Typing.Delay ms={1000} />
+                <Typing.Backspace count={30} />
+                <span>Mechanical Engineering Graduate With a Passion For CAD Modelling</span>
+                <Typing.Delay ms={1000} />
+                <Typing.Backspace count={70} />
+                <span>Potential Architects If Have Won the Powerball Someday</span>
+                <Typing.Delay ms={1000} />
+                <Typing.Backspace count={60} />
+                <span>Badminton Love And Aiming For A Win In The Amateur Open Game.</span>
+                <Typing.Delay ms={1000} />
+                <Typing.Backspace count={65} />
+              </Typing>
+              </h4>
+            </div>        
             <Social />
           </div>       
           <div className='planeContainer'></div>
         </div>
         
-        {/* <div className='about-me' style={{marginTop: window.innerWidth < 600 ? '1rem' :'5rem'}}>
-          <div className='Education'>
-            <div className='about_Container'>
-              <div className='imageContainer'>
-                <a href='https://www.unsw.edu.au/'><img src={UNSW} className='unswImg' alt='' /></a>
-              </div>
-              <div className='edu'>
-                <h4><T keyName='master' /> </h4>
-                <h5> - <T keyName='master1' /> </h5>
-                <h5> - <T keyName='master2' /></h5>
-              </div>
-            </div>
-            <div className='about_Container'>
-              <div className='imageContainer'>
-                <a href='https://www.unsw.edu.au/'><img src={UNSW} className='unswImg'alt='' /></a>
-              </div>
-              <div className='edu'>
-                <h4><T keyName='bachelor' /></h4>
-                <h5> - <T keyName='bachelor1' /></h5>
-                <h5> - <T keyName='bachelor2' /></h5>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <TechStack />
-        <TechSphere /> */}
+        
 
       </div>
     </div>
