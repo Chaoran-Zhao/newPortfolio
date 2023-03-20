@@ -62,9 +62,9 @@ const techStack = () => {
         <div className='btn3'>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"  alt="React" className='tech-icon'></img><span>React Native</span>
         </div>
-        {/* <div className='btn3'>
-          <img src={technologies[9].icon }alt="Redux" className='tech-icon'></img><span>Redux</span>
-        </div> */}
+        <div className='btn3'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" className='tech-icon'></img><span>Redux</span>
+        </div>
         <div className='btn3'>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"  alt="Node" className='tech-icon'></img><span>Node JS </span>
         </div>
@@ -109,9 +109,9 @@ const techStack = () => {
         <div className='btn3'>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"  alt="MongoDB" className='tech-icon'></img><span>MongoDB</span>
         </div> 
-        {/* <div className='btn3'>
-          <img src={technologies[23].icon }  alt="MongoDB" className='tech-icon'></img><span>Three JS</span>
-        </div>  */}
+        <div className='btn3'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg"  alt="Three" className='tech-icon'></img><span>Three JS</span>
+        </div> 
         <div className='btn3'>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"   alt="Git" className='tech-icon'></img><span>Git </span>
         </div> 

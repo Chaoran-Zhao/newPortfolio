@@ -3,14 +3,16 @@ import React from 'react'
 import { T } from "@tolgee/react"
 import './about.css'
 import { UNSW } from '../../assets'
-import TechStack from '../techStack'
+import TechStack from './techStack'
 import TechSphere from './techSphere'
+import { StaticCloud } from "./iconSphere";
 
 const About = () => {
 
   // document.querySelector('canvas').style.display = 'none'
   return (
     <>
+    <h1 className='title'> About Me</h1>
     <div className='about-me' style={{ marginTop: window.innerWidth < 600 ? '1rem' : '5rem' }}>
       <div className='Education'>
         <div className='about_Container'>
@@ -36,7 +38,8 @@ const About = () => {
       </div>
     </div>
     <TechStack />
-    <TechSphere />
+    {/* <TechSphere /> */}
+    <StaticCloud />
     </> 
   )
 }

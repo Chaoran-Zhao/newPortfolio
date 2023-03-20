@@ -3,6 +3,7 @@ import "./techSphere.css" ;
 
 // Importing TagCloud package
 import TagCloud from "TagCloud";
+import { UNSW } from '../../assets'
 
 const TextShpere = () => {
   // Animation settings for Text Cloud
@@ -28,7 +29,7 @@ const TextShpere = () => {
       const options = {
         radius: 300,
         maxSpeed: "normal",
-        initSpeed: "normal",
+        initSpeed: "fast",
         keep: true,
       };
 
