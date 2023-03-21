@@ -71,7 +71,7 @@ function App() {
           </Draggable>        
         </header>
 
-        <div className= {theme.palette.mode==='light' ? 'light' : 'dark'}>
+        <div id='main' className= {theme.palette.mode==='light' ? 'light' : 'dark'}>
           <NavBar />
           <Routes>
             <Route path="/" element={ <> <Background /> <Main /> </>} />
@@ -79,9 +79,11 @@ function App() {
             <Route path="/projects" element={ <Projects />} />
             <Route path="/interests" element={ <Interests />} />
             <Route path="/resume" element={ <Resume />} />
-          </Routes>      
-          <Footer /> 
+          </Routes>            
         </div>
+
+        <Footer />  
+        
 
         
         </ThemeProvider>

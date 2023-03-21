@@ -12,7 +12,7 @@ const About = () => {
   // document.querySelector('canvas').style.display = 'none'
   return (
     <>
-    <h1 className='title'> About Me</h1>
+    <h1 className='title'> <T keyName='nav_about' /></h1>
     <div className='about-me' style={{ marginTop: window.innerWidth < 600 ? '1rem' : '5rem' }}>
       <div className='Education'>
         <div className='about_Container'>

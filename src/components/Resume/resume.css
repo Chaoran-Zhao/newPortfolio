@@ -1,0 +1,37 @@
+
+.pdfContainer{
+  background-color: #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+
+.resume-main{
+    width: 50%;
+    margin:0px auto;
+}
+
+.resume-main canvas {
+    position: relative;
+}
+.ViewButton {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-bottom: 10px
+    ;
+}
+
+
+@media screen and (max-width: 640px) {
+    .resume-main{
+        width: 90%;
+        margin:0px auto;    }
+    .pdfContainer{
+        height: 65vh;
+    }
+}
