@@ -8,6 +8,7 @@ import About from "./components/About/About";
 import Projects from "./components/Proj/Projects";
 import Interests from "./components/Interests/Interests";
 import Resume from "./components/Resume/resume";
+import Photo from "./components/Interests/Photo";
 
 import Background from "./components/background";
 
@@ -78,6 +79,7 @@ function App() {
             <Route path="/about" element={ <About />} />
             <Route path="/projects" element={ <Projects />} />
             <Route path="/interests" element={ <Interests />} />
+            <Route path="/photo" element={ <Photo />} />
             <Route path="/resume" element={ <Resume />} />
           </Routes>            
         </div>

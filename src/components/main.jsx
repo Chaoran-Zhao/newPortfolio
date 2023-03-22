@@ -14,7 +14,7 @@ import { init } from "../utilis/aircraftLayer";
 const Main = () => {
   // aircraft model
   useEffect(() => {
-    init()
+    // init()
   }, [])
 
   

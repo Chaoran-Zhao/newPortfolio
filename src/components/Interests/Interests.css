@@ -1,0 +1,31 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  margin: auto;
+  gap: 15px
+}
+
+.item{
+    width: 250px;
+    height: 250px;
+}
+#inCamera{
+    background-color: cadetblue;
+}
+#inAircraft{
+    background-color: rgb(112, 188, 231);
+}
+#inBadminton{
+    background-color: rgb(136, 240, 95);
+}
+#inTravel{
+    background-color: rgb(214, 158, 52);
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
