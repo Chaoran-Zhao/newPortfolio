@@ -36,4 +36,13 @@ export const projects = [
     visit: 'https://google.com',color: '#d0bb57',
     id: 3,
   },
+  {
+    title: 'MyReact',
+    description: "This project has replicated a very simplified version of React focused on diffing on the virtual DOM and rendering on real DOM.",
+    image: require('../assets/proj/proj4.PNG'),
+    tags: ['JavaScript'],
+    source: 'https://google.com',
+    visit: 'https://google.com',color: '#58201e',
+    id: 4,
+  },
 ];

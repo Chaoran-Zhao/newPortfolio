@@ -14,5 +14,9 @@
   "master2" : "澳大利亚全球奖学金 (Australia's Global University Award)",
   "sound" : "音乐",
   "resume" : "查看简历",
-  "transcript": "查看成绩单"
+  "transcript": "查看成绩单",
+  "Frontend":"前端",
+  "Full-Stack":"全栈",
+  "Others": "其他",
+  "All": "全部"
 }

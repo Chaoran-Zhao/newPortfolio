@@ -14,5 +14,9 @@
   "master2" : "Received Australia's Global University Award PUCA1026",
   "sound" : "Sound",
   "resume" : "View Resume",
-  "transcript": "View Transcript"
+  "transcript": "View Transcript",
+  "Frontend":"Frontend",
+  "Full-Stack":"Full-Stack",
+  "Others": "Others",
+  "All": "All"
 }
