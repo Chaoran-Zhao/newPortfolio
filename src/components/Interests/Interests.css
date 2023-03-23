@@ -7,8 +7,10 @@
 }
 
 .item{
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+
 }
 #inCamera{
     background-color: cadetblue;
@@ -23,6 +25,19 @@
     background-color: rgb(214, 158, 52);
 }
 
+#IntAircraftCanvas{
+  height: 80% !important;
+}
+#IntSportCanvas{
+  height: 80% !important;
+}
+
+#IntCameraCanvas{
+  height: 80% !important;
+}
+#IntLegoCanvas{
+  height: 80% !important;
+}
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
   .flex-container {

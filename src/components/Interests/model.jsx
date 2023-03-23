@@ -20,8 +20,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.001: 0.001}
-        position={isMobile ? [0, -3, -2.2] : [-2, -1, -1.5]}
+        scale={isMobile ? 0.00065: 0.00065}
+        position={isMobile ? [-2, 1, 0] : [-1, 1, 0]}
         rotation={[4.7, 0, 0]}
       />
     </mesh>
@@ -56,6 +56,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
+      id="IntAircraftCanvas"
       frameloop='demand'
       shadows
       dpr={[1, 2]}
