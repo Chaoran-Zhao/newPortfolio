@@ -33,6 +33,20 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [rotation, setRotation] = useState(false);
+
+  
+  useEffect(() => {
+    var canvas=document.getElementById("IntLegoCanvas");
+    if (canvas!==null){
+      canvas.addEventListener("mouseenter", function(event){
+        setRotation(true)
+    });
+    canvas.addEventListener("mouseleave", function(event){
+        setRotation(false)
+    });
+    }
+  });
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -69,6 +83,8 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          autoRotate={rotation}
+          autoRotateSpeed={5}
         />
         <Computers isMobile={isMobile} />
       </Suspense>

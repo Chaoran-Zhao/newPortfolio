@@ -1,10 +1,10 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import CanvasLoader from "./Loader";
+import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-   const computer = useGLTF("./plane/badminton.gltf");
+   const computer = useGLTF("./plane/reduce1.gltf");
 
   return (
     <mesh>
@@ -20,9 +20,9 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.6: 0.6}
-        position={isMobile ? [-1, 2, -0.5] : [-1, 2, -0.5]}
-        rotation={[1, 0.2, -0.5]}
+        scale={isMobile ? 0.0008: 0.001}
+        position={isMobile ? [-1, 0, 0] : [-1, 0, 0]}
+        rotation={[4.7, 0, 0]}
       />
     </mesh>
   );
@@ -32,20 +32,6 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [rotation, setRotation] = useState(false);
-
-  
-  useEffect(() => {
-    var canvas=document.getElementById("IntSportCanvas");
-    if (canvas!==null){
-      canvas.addEventListener("mouseenter", function(event){
-        setRotation(true)
-    });
-    canvas.addEventListener("mouseleave", function(event){
-        setRotation(false)
-    });
-    }
-  });
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -70,7 +56,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      id="IntSportCanvas"
+      id="AircraftCanvas"
       frameloop='demand'
       shadows
       dpr={[1, 2]}
@@ -82,8 +68,6 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          autoRotate={rotation}
-          autoRotateSpeed={5}
         />
         <Computers isMobile={isMobile} />
       </Suspense>

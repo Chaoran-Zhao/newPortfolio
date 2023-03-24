@@ -6,11 +6,11 @@ import { useCursor, MeshReflectorMaterial, Image, Text, Environment } from '@rea
 import { useRoute, useLocation } from 'wouter'
 import { easing } from 'maath'
 import getUuid from 'uuid-by-string'
-import {images} from './index'
+import {images} from '../index'
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import './Photo.css'
 import { useNavigate } from "react-router-dom";
-import { ColorModeContext, tokens } from "../../theme";
+import { ColorModeContext, tokens } from "../../../theme";
 import { Box, IconButton, useTheme, Button, } from "@mui/material";
 
 const GOLDENRATIO = 1.61803398875

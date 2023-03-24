@@ -28,15 +28,15 @@ const Interests = () => {
       </div>
       <div className="item" id='inAircraft'>
         <Model />  
-        <Button style={{backgroundColor: "#457b9d", color: colors.primary[100] }}> OMG, it's an Aircraft</Button>
+        <Button style={{backgroundColor: "#457b9d", color: colors.primary[100] }} onClick={() => {navigate("/aircraft");}}> Made by Engineer</Button>
       </div>     
       <div className="item" id='inBadminton'>
         <SportModel />  
-        <Button style={{backgroundColor: "#457b9d", color: colors.primary[100] }}> Scream for Sports</Button>
+        <Button style={{backgroundColor: "#457b9d", color: colors.primary[100] }} onClick={() => {navigate("/sports");}}> Scream for Sports</Button>
       </div>
       <div className="item" id='inTravel'>
         <LegoModel />
-        <Button style={{backgroundColor: "#457b9d", color: colors.primary[100] }}> snap! crackle! travel!</Button>
+        <Button style={{backgroundColor: "#457b9d", color: colors.primary[100] }} onClick={() => {navigate("/travel");}}> snap! crackle! travel!</Button>
       </div>
     </div>
     </> 

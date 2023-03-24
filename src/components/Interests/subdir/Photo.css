@@ -1,0 +1,55 @@
+#photoCanvas{
+    margin: 0;
+    width: 100vw;
+    height: calc(100vh - 180px) !important;
+    
+}
+
+.PhotoHeader{
+    height: 50px;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+.subtitle{
+    margin: 25px;
+}
+.mainstuff{
+    margin: 25px;
+    font-size: medium;
+}
+
+.slidder-wrapper {
+  text-align: center;
+  z-index:1 !important;
+}
+.slider-content{
+  text-align: center;
+  height: 400px !important;
+}
+.sliding-img{
+  width: 50%;
+  height: 100%;
+  object-fit: contain !important;
+}
+.modelContainer{
+  height: 350px
+}
+.sliderContainer{
+  height: 500px
+}
+.previousButton, .nextButton {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .slider-content{
+    height: 250px !important;
+  }
+  .modelContainer{
+    height: 200px
+  }
+  .sliderContainer{
+    height: 350px
+  }
+}
