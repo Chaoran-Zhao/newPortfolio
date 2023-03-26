@@ -33,7 +33,7 @@ const Photo = () => {
           }}
         />
       </Button>
-      
+    <h1 className='title heading' >Check out My Recent Destinations!</h1>
     </div>
     <Canvas id="photoCanvas" dpr={[1, 1.5]} camera={{ fov: 70, position: [0, 2, 15] }}>
           <color attach="background" args={[`${theme.palette.mode==='dark'? colors.primary[500]: "#fcfcfc"}`]} />

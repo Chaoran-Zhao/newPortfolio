@@ -29,6 +29,17 @@
 #inTravel{
     background-color: rgb(214, 158, 52);
 }
+#inMore{
+    background-color: rgb(192, 141, 173);
+    text-align: center;
+}
+.moretoexplore{
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 #IntAircraftCanvas{
   height: 80% !important;

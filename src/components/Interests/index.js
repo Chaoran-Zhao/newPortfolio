@@ -8,8 +8,8 @@ const pexel = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}
 
 export const images = [
   // Front
-  { position: [0, 0, 1.5], rotation: [0, 0, 0], url: pic1},
-  { position: [0.2, 0, 1.7], rotation: [0, 0, 0], url: pic1},
+  { position: [0, 0, 1.5], rotation: [0, 0, 0], url: pic1, hori: true},
+  { position: [0.2, 0, 1.7], rotation: [0, 0, 0], url: pic1,hori: true },
   // Back
   { position: [-0.8, 0, -0.6], rotation: [0, 0, 0], url: pic2 },
   { position: [0.8, 0, -0.6], rotation: [0, 0, 0], url: pic3 },

@@ -11,7 +11,7 @@ import Resume from "./components/Resume/resume";
 import Photo from "./components/Interests/subdir/Photo";
 import AircraftShow from "./components/Interests/subdir/aircraftShow";
 import SportShow from "./components/Interests/subdir/SportShow";
-import TravelShow from "./components/Interests/subdir/TravelShow";
+import TravelShow from "./components/Interests/subdir/PhotoGallery";
 
 import Background from "./components/background";
 
@@ -82,10 +82,10 @@ function App() {
             <Route path="/about" element={ <About />} />
             <Route path="/projects" element={ <Projects />} />
             <Route path="/interests" element={ <Interests />} />
-            <Route path="/photo" element={ <Photo />} />
+            <Route path="/travel" element={ <Photo />} />
             <Route path="/aircraft" element={ <AircraftShow />} />
             <Route path="/sports" element={ <SportShow />} />
-            <Route path="/travel" element={ <TravelShow />} />
+            <Route path="/photo" element={ <TravelShow />} />
             <Route path="/resume" element={ <Resume />} />
           </Routes>            
         </div>

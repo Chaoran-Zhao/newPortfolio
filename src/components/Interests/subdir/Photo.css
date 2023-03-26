@@ -1,22 +1,28 @@
 #photoCanvas{
-    margin: 0;
-    width: 100vw;
-    height: calc(100vh - 180px) !important;
-    
+  margin: 0;
+  width: 100vw;
+  height: calc(100vh - 180px) !important;
+  position: relative;    
+}
+.heading {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  z-index: 1;
 }
 
 .PhotoHeader{
-    height: 50px;
-    padding-left: 25px;
-    padding-top: 10px;
+  height: 50px;
+  padding-left: 25px;
+  padding-top: 10px;
 }
 
 .subtitle{
-    margin: 25px;
+  margin: 25px;
 }
 .mainstuff{
-    margin: 25px;
-    font-size: medium;
+  margin: 25px;
+  font-size: medium;
 }
 
 .slidder-wrapper {

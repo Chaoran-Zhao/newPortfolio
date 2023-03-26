@@ -38,6 +38,9 @@ const Interests = () => {
         <LegoModel />
         <Button style={{backgroundColor: "#457b9d", color: colors.primary[100] }} onClick={() => {navigate("/travel");}}> snap! crackle! travel!</Button>
       </div>
+      <div className="item" id='inMore'>
+        <h4 className='moretoexplore'>More to Explore...</h4>
+      </div>
     </div>
     </> 
   )
