@@ -1,11 +1,10 @@
 import React from 'react'
 import { useContext, useCallback } from "react"
-import config from '../preset/links';
+
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { ColorModeContext, tokens } from "../theme";
 import { useTheme,  } from "@mui/material";
-import links from "../preset/links"
 
 
 const Background = () => {

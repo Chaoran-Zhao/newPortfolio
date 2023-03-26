@@ -3,7 +3,7 @@ import React from 'react'
 const techStack = () => {
   return (
     <div>
-      <h2 className='tech-stack'>Tech Stack:</h2> 
+      <h2 className='tech-stack' style={{marginTop:'35px'}}>Tech Stack:</h2> 
       <h5 className='techs'><span className='btn22' id='langBtn' onClick={()=>{
         document.getElementById('framework').style.display = "none";
         document.getElementById('techBox').style.display = "none";

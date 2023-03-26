@@ -1,25 +1,12 @@
 .main {   
-    padding: 30px;
     width: 100%;
     text-align: center;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-.main-content { 
-    text-align: left;
-    display: flex;
     flex-direction: column;
-    width: 70%
-    /* background-color: beige; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.planeContainer {
-    width: 200px;
-    height: 200px;
-}
-.upper {
-    display: flex;
-    flex-direction: row;
-}
+
 

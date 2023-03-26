@@ -14,7 +14,7 @@ padding: 3rem;
 place-items: center;
 column-gap: 2rem;
 row-gap: 3rem;
-padding-botton: 40px;
+padding-bottom: 40px;
 @media screen and (max-width: 640px) {
   display: flex;
   flex-direction: column;

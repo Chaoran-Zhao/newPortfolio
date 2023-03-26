@@ -1,9 +1,11 @@
 .flex-container {
-  display: flex;
-  flex-direction: row;
-  width: max-content;
-  margin: auto;
-  gap: 15px
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  padding: 3rem;
+  place-items: center;
+  column-gap: 2rem;
+  row-gap: 3rem;
+  padding-bottom: 40px;
 }
 
 .item{
@@ -42,7 +44,7 @@
   height: 80% !important;
 }
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   .flex-container {
     flex-direction: column;
   }

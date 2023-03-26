@@ -1,0 +1,69 @@
+.tile-container{
+  position: relative;
+  border: solid #BDBDBD 2px;
+  margin: 5px 0px;
+  width:100%;
+  font-size:0; /* add */
+}
+
+.tile{
+  font-size:15px; /* or whatever you want */
+  min-height:22px;
+  height: max-content;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.teamimg{
+    object-fit: fill;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.timestamp{
+    color: #fec007 ;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.events{
+  display: grid ;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)) !important;
+  padding: 3rem;
+  place-items: center;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding-bottom: 40px;
+}
+.card{
+    width: 400px !important;
+}
+
+@media (max-width: 640px) {
+  .events{
+    margin: 0;
+    padding: 0;
+    padding-top:3rem;
+    padding-bottom: 40px;
+  }
+  .card{
+    width: calc(100% - 75px) !important;
+    /* margin:0px auto; */
+  }
+}
+
+.notice{
+  border: solid #BDBDBD 2px;
+  border-radius: 5px;
+  width: 80%;
+  margin: 0px auto;
+  margin-bottom: 40px;
+}
+.topButton{
+  display: grid ;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+}

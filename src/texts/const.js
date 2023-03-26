@@ -3,7 +3,7 @@ export const projects = [
     title: 'Portfolio Web',
     description: "This website. It has shown some of my projects and something that I want to share. It have included interesting features such as animated model/icons, dark mode, language mode, and tsparticles.",
       image: require('../assets/proj/portfolio.PNG'),
-      tags: ['React', 'Redux','ThreeJs'],
+      tags: ['React', 'Redux','ThreeJs','API'],
     source: 'https://google.com',
     visit: 'https://google.com',
     color: '#457b9d',

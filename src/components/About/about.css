@@ -1,22 +1,13 @@
-.about_Container {
-    display: flex;
-    width: 100%;
-    gap: 5%;
+.abouttext{
+    font-size: 1rem;
+    padding-bottom: 10px;
 }
 
-.imageContainer {
-    display: flex;
+.background-element {
+  background-image: url("../../assets/banner02.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.edu {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
-
-
 
 .title {
     font-family: "Space Grotesk, sans-serif";
@@ -64,4 +55,21 @@
     cursor: pointer;
     transition: var(--transition);
     margin-right: 5px;
+}
+
+.grid-container {
+  display: grid;
+  margin: 0;
+  grid-column-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)) ;
+  /* background-color: #2196F3; */
+  padding: 10px;
+  align-items: center;
+}
+
+.grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  text-align: left;
 }
