@@ -37,7 +37,7 @@ const Background = () => {
         },
         opacity: 0.1,
   },
-  fpsLimit: 30,
+  fpsLimit: 20,
   interactivity: {
       events: {
           onClick: {

@@ -42,6 +42,7 @@ const Interests = () => {
         <h4 className='moretoexplore'>More to Explore...</h4>
       </div>
     </div>
+    <div style={{ height: '40px' }}></div>
     </> 
   )
 }

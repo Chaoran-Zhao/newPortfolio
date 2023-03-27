@@ -61,7 +61,7 @@
   display: grid;
   margin: 0;
   grid-column-gap: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)) ;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr)) ;
   /* background-color: #2196F3; */
   padding: 10px;
   align-items: center;

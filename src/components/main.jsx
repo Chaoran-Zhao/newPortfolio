@@ -9,15 +9,10 @@ import { T } from "@tolgee/react"
 import './main.css'
 
 
-import { init } from "../utilis/aircraftLayer";
+
 
 const Main = () => {
-  // aircraft model
-  useEffect(() => {
-    // init()
-  }, [])
 
-  
 
   return (
     <div className='main'>

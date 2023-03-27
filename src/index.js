@@ -27,7 +27,7 @@ const tolgee = Tolgee()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <TolgeeProvider
         tolgee={tolgee}       
         fallback="Loading..." 
@@ -37,7 +37,7 @@ root.render(
       </BrowserRouter>
       
     </TolgeeProvider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 

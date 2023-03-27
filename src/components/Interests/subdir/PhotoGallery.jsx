@@ -1,15 +1,16 @@
 import React from 'react'
-import ImageGallery from 'react-image-gallery';
-import { useEffect, useRef, useState, useContext } from 'react'
+import { useEffect, useRef, useState, useContext , useCallback } from 'react'
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import './Photo.css'
 import { useNavigate } from "react-router-dom";
 import { ColorModeContext, tokens } from "../../../theme";
-import { Box, IconButton, useTheme, Button, } from "@mui/material";
+import { useTheme, Button, } from "@mui/material";
 
-import WSPGallery from "./Gallery"
+
 import {photos} from "../../../texts/photos"
-
+import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
+import {RiMapPin2Fill} from "react-icons/ri"
 
 const PhotoGallery = () => {
   const theme = useTheme();
@@ -17,6 +18,19 @@ const PhotoGallery = () => {
   const colorMode = useContext(ColorModeContext);
 
   const navigate = useNavigate();
+
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
 
   return (
     <><div className='PhotoHeader'>
@@ -31,7 +45,26 @@ const PhotoGallery = () => {
     </div>
     <h1 className='title'>Check out My Photo Gallery!</h1>
           
-    <WSPGallery galleryImages={photos} />
+    {/* <WSPGallery galleryImages={photos} /> */}
+    <div style={{ marginBottom: '40px' }}>
+      <Gallery photos={photos} onClick={openLightbox} />
+        <ModalGateway>
+          {viewerIsOpen ? (
+            <Modal onClose={closeLightbox}>
+              <Carousel
+                currentIndex={currentImage}
+                views={photos.map(x => ({
+                  ...x,
+                  srcset: x.srcSet,
+                  caption: <><RiMapPin2Fill /><>  </><span>{x.title}</span></>
+                }))}
+              />
+            </Modal>
+          ) : null}
+      </ModalGateway>
+    </div>
+    
+    <div style={{ height: '40px' }}></div>
     </>
     
   )

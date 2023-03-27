@@ -1,9 +1,16 @@
-#photoCanvas{
-  margin: 0;
+#map {  
   width: 100vw;
-  height: calc(100vh - 180px) !important;
-  position: relative;    
+  height: calc(100vh - 200px);
 }
+
+.marker {
+  display: block;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+
 .heading {
   position: absolute;
   top: 120px;

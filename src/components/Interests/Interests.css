@@ -58,5 +58,8 @@
 @media (max-width: 640px) {
   .flex-container {
     flex-direction: column;
+    padding:0px;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
   }
 }

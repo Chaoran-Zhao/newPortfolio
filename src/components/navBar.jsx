@@ -27,11 +27,11 @@ const NavBar = () => {
   return (
     <Box
       display="flex"
-      justifyContent="space-between"
+      justifyContent={window.innerWidth <500 ? "flex-end" :"space-between"}
       alignItems="center"
-      p={2}
+      p={window.innerWidth <500 ? -1: 2}
       className= {theme.palette.mode==='light' ? 'navBar_light ' : 'navBar_dark '}
-      style={{height:'80px'}}
+      style={{height:'80px',padding:window.innerWidth <500 ? 'none' : 'auto' }}
     >
 
       <Box
@@ -39,14 +39,16 @@ const NavBar = () => {
         flex={1}
         alignItems="center"
       >
-        <Button style={{display: window.innerWidth <500 ?'none' : 'flex'}} onClick={() => {navigate("/"); setCurrent('home')}}>
+        <Button  style={{padding: window.innerWidth <500 ?'0' : 'auto'}} onClick={() => {navigate("/"); setCurrent('home')}}>
           <img className="logo" src={Logo} alt="Logo" title="home"  />
         </Button>
         
         
       </Box>
 
-      <Box display="flex" flex={10} justifyContent="center">
+      <Box display="flex" flex={9} 
+      justifyContent="center"
+      >
         {/* <Button
           style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
           className= {current==='home' ? "tab-click" : 'tab'}
@@ -56,7 +58,7 @@ const NavBar = () => {
           <T keyName="nav_home" />
         </Button> */}
         <Button
-          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
+          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.6rem" : "1rem" }}
           className= {current==='about' ? "tab-click" : 'tab'}
           id="tababout"
           onClick={() => {navigate("/about");setCurrent('about')}}
@@ -64,7 +66,7 @@ const NavBar = () => {
           <T keyName="nav_about" />
         </Button>
         <Button
-          style={{ color: colors.primary[100],fontSize: window.innerWidth <500 ? "0.65rem" : "1rem" }}
+          style={{ color: colors.primary[100],fontSize: window.innerWidth <500 ? "0.6rem" : "1rem" }}
           className= {current==='projects' ? "tab-click" : 'tab'}
           id="tabprojects"
           onClick={() => {navigate("/projects");setCurrent('projects')}}
@@ -72,7 +74,7 @@ const NavBar = () => {
           <T keyName="nav_projects" />
         </Button>
         <Button
-          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem"  }}
+          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.6rem" : "1rem"  }}
           className= {current==='interests' ? "tab-click" : 'tab'}
           id="tabinterests"
           onClick={() => {navigate("/interests");setCurrent('interests')}}
@@ -80,7 +82,7 @@ const NavBar = () => {
           <T keyName="nav_interests" />
         </Button>
         <Button
-          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.65rem" : "1rem"   }}
+          style={{ color: colors.primary[100], fontSize: window.innerWidth <500 ? "0.6rem" : "1rem"   }}
           className= {current==='resume' ? "tab-click" : 'tab'}
           id="tabresume"
           onClick={() => {
@@ -93,7 +95,7 @@ const NavBar = () => {
       </Box>
 
       <Box display="flex" 
-        flex={1} 
+        flex={2} 
         justifyContent="flex-end"
         >
         <IconButton onClick={colorMode.toggleColorMode}>
