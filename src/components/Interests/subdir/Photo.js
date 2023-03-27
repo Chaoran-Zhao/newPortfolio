@@ -6,23 +6,28 @@ import { useNavigate } from "react-router-dom";
 import { ColorModeContext, tokens } from "../../../theme";
 import {useTheme, Button, } from "@mui/material";
 
-import mapboxgl from 'mapbox-gl'
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import mapboxgl from '!mapbox-gl';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker'; // Load worker code separately with worker-loader
 
-const Photo = () => {
+mapboxgl.workerClass = MapboxWorker; // Wire up loaded worker to be used instead of the default
+
+function Photo() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
 
   const navigate = useNavigate();
-  const [rednder, setrednder] = useState(null)
+  const [rednder, setrednder] = useState(null);
   useEffect(() => {
     let mapdiv = document.querySelector('#map');
-    console.log(mapdiv)
-    if (mapdiv!==undefined && rednder!==null){
-      setrednder(false)
+    console.log(mapdiv);
+    if (mapdiv !== undefined && rednder !== null) {
+      setrednder(false);
     }
-  })
-  
+  });
+
 
 
   mapboxgl.accessToken = 'pk.eyJ1Ijoia2VubmlzIiwiYSI6ImNsZnFpMTcxaTFmcjczc3Bmc3J6a212bnQifQ.-_A5rXbFDvDj7RG3U-umEg';
@@ -33,112 +38,111 @@ const Photo = () => {
       {
         'type': 'Feature',
         'properties': {
-            'message': 'Singapore, The Lion City ',
-            'iconSize': [30, 30],
-            'src': require('../../../assets/City/Singapore.jpg')
+          'message': 'Singapore, The Lion City ',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Singapore.jpg')
         },
         'geometry': {
-            'type': 'Point',
-            'coordinates': [103.8454,1.3147]
+          'type': 'Point',
+          'coordinates': [103.8454, 1.3147]
         }
       },
       {
         'type': 'Feature',
         'properties': {
-            'message': 'Bangkok, Thailand',
-            'iconSize': [30, 30],
-            'src': require('../../../assets/City/Bangkok.jpg')
+          'message': 'Bangkok, Thailand',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Bangkok.jpg')
         },
         'geometry': {
-            'type': 'Point',
-            'coordinates': [100.50483, 13.75335]
+          'type': 'Point',
+          'coordinates': [100.50483, 13.75335]
         }
       },
       {
         'type': 'Feature',
         'properties': {
-            'message': 'Kuala Lumpur, Malaysia',
-            'iconSize': [30, 30],
-            'src': require('../../../assets/City/Kuala.jpg')
+          'message': 'Kuala Lumpur, Malaysia',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Kuala.jpg')
         },
         'geometry': {
-            'type': 'Point',
-            'coordinates': [101.6865300, 3.1412000]
+          'type': 'Point',
+          'coordinates': [101.6865300, 3.1412000]
         }
       },
       {
         'type': 'Feature',
         'properties': {
-            'message': 'Malaka, Malaysia',
-            'iconSize': [30, 30],
-            'src': require('../../../assets/City/Malaka.jpg')
+          'message': 'Malaka, Malaysia',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Malaka.jpg')
         },
         'geometry': {
-            'type': 'Point',
-            'coordinates': [102.2405, 2.1960]
+          'type': 'Point',
+          'coordinates': [102.2405, 2.1960]
         }
       },
       {
         'type': 'Feature',
         'properties': {
-            'message': 'Langkawi, Malaysia',
-            'iconSize': [30, 30],
-            'src': require('../../../assets/City/Langkawi.jpg')
+          'message': 'Langkawi, Malaysia',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Langkawi.jpg')
         },
         'geometry': {
-            'type': 'Point',
-            'coordinates': [99.78261, 6.373586]
+          'type': 'Point',
+          'coordinates': [99.78261, 6.373586]
         }
       },
       {
         'type': 'Feature',
         'properties': {
-            'message': 'Harbin, China',
-            'iconSize': [30, 30],
-            'src': require('../../../assets/City/Harbin.jpg')
+          'message': 'Harbin, China',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Harbin.jpg')
         },
         'geometry': {
-            'type': 'Point',
-            'coordinates': [126.63951, 45.75553]
+          'type': 'Point',
+          'coordinates': [126.63951, 45.75553]
         }
       },
       {
         'type': 'Feature',
         'properties': {
-            'message': 'Sydney, Australia',
-            'iconSize': [30, 30],
-            'src': require('../../../assets/City/Sydney.jpg')
+          'message': 'Sydney, Australia',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Sydney.jpg')
         },
         'geometry': {
-            'type': 'Point',
-            'coordinates': [151.20695, -33.8696]
+          'type': 'Point',
+          'coordinates': [151.20695, -33.8696]
         }
       },
       {
         'type': 'Feature',
         'properties': {
-            'message': 'Hong Kong, China',
-            'iconSize': [30, 30],
-            'src': require('../../../assets/City/Hongkong.jpg')
+          'message': 'Hong Kong, China',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Hongkong.jpg')
         },
         'geometry': {
-            'type': 'Point',
-            'coordinates': [114.186966, 22.336157]
+          'type': 'Point',
+          'coordinates': [114.186966, 22.336157]
         }
       }
-
     ]
   };
 
   useEffect(() => {
     let mapdiv = document.querySelector('#map');
-    console.log(mapdiv)
-    if (mapdiv!==undefined){
+    console.log(mapdiv);
+    if (mapdiv !== undefined) {
       const map = new mapboxgl.Map({
         container: 'map',
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/mapbox/streets-v12',
-        center: [-65.017, -16.457],
+        center: [151.20695, -33.8696],
         zoom: 5
       });
 
@@ -149,42 +153,42 @@ const Photo = () => {
         const width = marker.properties.iconSize[0];
         const height = marker.properties.iconSize[1];
         el.className = 'marker';
-        el.style.backgroundImage= `url(${marker.properties.src})`;
+        el.style.backgroundImage = `url(${marker.properties.src})`;
         el.style.width = `${width}px`;
         el.style.height = `${height}px`;
         el.style.backgroundSize = '100%';
 
         el.addEventListener('click', () => {
-            window.alert(marker.properties.message);
+          window.alert(marker.properties.message);
         });
 
         // Add markers to the map.
         new mapboxgl.Marker(el)
-            .setLngLat(marker.geometry.coordinates)
-            .addTo(map);
-        }
+          .setLngLat(marker.geometry.coordinates)
+          .addTo(map);
       }
-  },[rednder])
-  
+    }
+  }, [rednder]);
+
 
 
   return (
-    <>
-    <div className='PhotoHeader'>
-      <Button style={{border: '2px solid', borderColor: theme.palette.mode==='light'? colors.primary[500]: "#fcfcfc"}}>
-        <ArrowBackIcon
-          style={{color: theme.palette.mode==='light'? colors.primary[500]: "#fcfcfc"}}
-          onClick={() => {
-            navigate("/interests");
-          }}
-        />
-      </Button> 
-      <h1 className='title heading' >Check out My Recent Destinations!</h1>  
-    </div>
     
-    <div id="map"></div>
-    </>
-  )
+    <div>
+      <div className='PhotoHeader'>
+        <Button style={{ border: '2px solid', borderColor: theme.palette.mode === 'light' ? colors.primary[500] : "#fcfcfc" }}>
+          <ArrowBackIcon
+            style={{ color: theme.palette.mode === 'light' ? colors.primary[500] : "#fcfcfc" }}
+            onClick={() => {
+              navigate("/interests");
+            } } />
+        </Button>
+        <h1 className='title heading'>Check out My Recent Destinations!</h1>
+      </div>
+
+      <div id="map"></div>
+    </div>
+  );
 }
 
 export default Photo
