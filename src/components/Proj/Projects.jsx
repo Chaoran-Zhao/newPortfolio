@@ -70,8 +70,11 @@ const Projects = () => {
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks href={p.visit}> <SiGithub /> </ExternalLinks>
-              <ExternalLinks href={p.source}> <BsFillArrowUpRightCircleFill /></ExternalLinks>
+              <ExternalLinks href={p.source}> <SiGithub /> </ExternalLinks>
+              {p.visit !== "" ?
+              <ExternalLinks href={p.visit}> <BsFillArrowUpRightCircleFill /></ExternalLinks>
+            : <></>}
+              
             </UtilityList>
           </BlogCard>
         );

@@ -68,8 +68,15 @@ function App() {
               <CloudQueueIcon className="fab fa-soundcloud sound-cloud"/>
               <span><T keyName="sound"/></span>
               <div className="on-off">
-                  <span id="off" onClick={()=>{soundTrack('off')}}>OFF</span>
-                  <span id="on" onClick={()=>{soundTrack('on')}}>On</span>
+                <span id="off" 
+                // onClick={()=>{soundTrack('off')}}
+                  onClick={()=>{soundTrack('off')}}
+                  onTouchEnd={()=>{soundTrack('off')}}              
+                >OFF</span>
+                <span id="on" 
+                  onClick={()=>{soundTrack('on')}}
+                  onTouchEnd={()=>{soundTrack('on')}} 
+                >On</span>
               </div>
             </div> 
           </Draggable>        

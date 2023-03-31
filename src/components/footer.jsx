@@ -8,6 +8,8 @@ import {BsSun} from 'react-icons/bs'
 import { T } from "@tolgee/react"
 import { useTolgee } from '@tolgee/react';
 import "./footer.css"
+
+
 const Footer = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -24,11 +26,10 @@ const Footer = () => {
       className= {theme.palette.mode==='light' ? 'navBar_light ' : 'navBar_dark '}
       style={{height:'50px', position:'absolute',  bottom: '0', width:'100%'}}
     >
-      <Box display="flex" flex={10} justifyContent="center"  style={{position:'relative'}}>
-        <div className='sentence'> Made on a cool day with fitful sunshine <BsSun /></div>
+      <Box display="flex" flex={1} justifyContent="center"  style={{position:'relative', }}>
+        <div className='sentence' style={{fontSize: window.innerWidth <500 ?'0.8rem' : '1.3rem'}}> <T keyName="Footer" /> <BsSun /></div>
       </Box>
     </Box>
-    
   )
 }
 

@@ -39,10 +39,19 @@ export const projects = [
   {
     title: 'MyReact',
     description: "This project has replicated a very simplified version of React focused on diffing on the virtual DOM and rendering on real DOM.",
-    image: require('../assets/proj/proj4.PNG'),
+    image: require('../assets/proj/proj5.PNG'),
     tags: ['JavaScript'],
     source: 'https://github.com/Chaoran-Zhao/myReact',
-    visit: 'https://google.com',color: '#58201e',
+    visit: 'https://gleeful-croissant-4d3241.netlify.app/',color: '#58201e',
     id: 4,
+  },
+  {
+    title: 'Bill Split App',
+    description: "This is a Bill Split App developed using React Native. There has no backend support and only mock-up data is used. ",
+    image: require('../assets/proj/proj_n.png'),
+    tags: ['React Native'],
+    source: 'https://github.com/Chaoran-Zhao/ReactNativeAPP',
+    visit: '',color: '#457b9d',
+    id: 5,
   },
 ];

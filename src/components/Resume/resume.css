@@ -30,7 +30,7 @@
 @media screen and (max-width: 640px) {
     .resume-main{
         width: 90%;
-        margin:0px auto;    }
+        margin-bottom: 40px;    }
     .pdfContainer{
         height: 65vh;
     }
