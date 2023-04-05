@@ -1,14 +1,14 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import CanvasLoader from "./Loader";
+import React, { Suspense, useEffect, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import CanvasLoader from './Loader';
 
 const Computers = ({ isMobile }) => {
-   const computer = useGLTF("./plane/Polaroid.gltf");
+  const computer = useGLTF('./plane/Polaroid.gltf');
 
   return (
     <mesh>
-      <hemisphereLight intensity={0} groundColor='black' />
+      <hemisphereLight intensity={0} groundColor="black" />
       <spotLight
         position={[50, 50, 50]}
         angle={1}
@@ -21,7 +21,7 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={0} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1.5: 1.5}
+        scale={isMobile ? 1.5 : 1.5}
         position={isMobile ? [-2, 0, 0] : [-1, 0, 0]}
         rotation={[1, 1.5, -1]}
       />
@@ -29,29 +29,25 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-
-
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [rotation, setRotation] = useState(false);
 
-  
   useEffect(() => {
-    var canvas=document.getElementById("IntCameraCanvas");
-    if (canvas!==null){
-      canvas.addEventListener("mouseenter", function(event){
-        setRotation(true)
-    });
-    canvas.addEventListener("mouseleave", function(event){
-        setRotation(false)
-    });
+    var canvas = document.getElementById('IntCameraCanvas');
+    if (canvas !== null) {
+      canvas.addEventListener('mouseenter', function (event) {
+        setRotation(true);
+      });
+      canvas.addEventListener('mouseleave', function (event) {
+        setRotation(false);
+      });
     }
   });
-  
 
   useEffect(() => {
     // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
 
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
@@ -62,18 +58,18 @@ const ComputersCanvas = () => {
     };
 
     // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
 
     // Remove the listener when the component is unmounted
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
     };
   }, []);
 
   return (
     <Canvas
       id="IntCameraCanvas"
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 20 }}

@@ -1,19 +1,17 @@
-import React from 'react'
-import { useContext, useCallback } from "react"
+import React from 'react';
+import { useContext, useCallback } from 'react';
 
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import { ColorModeContext, tokens } from "../theme";
-import { useTheme,  } from "@mui/material";
-
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import { ColorModeContext, tokens } from '../theme';
+import { useTheme } from '@mui/material';
 
 const Background = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
 
-
-  const particlesInit = useCallback(async engine => {
+  const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -21,90 +19,92 @@ const Background = () => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async container => {
-      await console.log(container);
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
   }, []);
 
-
   return (
-    <Particles id="tsparticles"
+    <Particles
+      id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-      background: {
-        color: {
+        background: {
+          color: {
             value: '#000',
+          },
+          opacity: 0.1,
         },
-        opacity: 0.1,
-  },
-  fpsLimit: 20,
-  interactivity: {
-      events: {
-          onClick: {
+        fpsLimit: 20,
+        interactivity: {
+          events: {
+            onClick: {
               enable: true,
-              mode: "push",
-          },
-          onHover: {
+              mode: 'push',
+            },
+            onHover: {
               enable: true,
-              mode: "repulse",
+              mode: 'repulse',
+            },
+            resize: true,
           },
-          resize: true,
-      },
-      modes: {
-          push: {
+          modes: {
+            push: {
               quantity: 4,
-          },
-          repulse: {
+            },
+            repulse: {
               distance: 200,
               duration: 0.4,
+            },
           },
-      },
-  },
-  particles: {
-      color: {
-          value: theme.palette.mode==="light" ? colors.primary[500] : "#fcfcfc",
-      },
-      links: {
-          color: theme.palette.mode==="light" ? colors.primary[500]: "#fcfcfc",
-          distance: 150,
-          enable: true,
-          opacity: 0.7,
-          width: 1,
-      },
-      collisions: {
-          enable: true,
-      },
-      move: {
-          directions: "none",
-          enable: true,
-          outModes: {
-              default: "bounce",
+        },
+        particles: {
+          color: {
+            value:
+              theme.palette.mode === 'light' ? colors.primary[500] : '#fcfcfc',
           },
-          random: false,
-          speed: 6,
-          straight: false,
-      },
-      number: {
-          density: {
+          links: {
+            color:
+              theme.palette.mode === 'light' ? colors.primary[500] : '#fcfcfc',
+            distance: 150,
+            enable: true,
+            opacity: 0.7,
+            width: 1,
+          },
+          collisions: {
+            enable: true,
+          },
+          move: {
+            directions: 'none',
+            enable: true,
+            outModes: {
+              default: 'bounce',
+            },
+            random: false,
+            speed: 6,
+            straight: false,
+          },
+          number: {
+            density: {
               enable: true,
               area: 800,
+            },
+            value: 80,
           },
-          value: 80,
-      },
-      opacity: {
-          value: 0.5,
-      },
-      shape: {
-          type: "circle",
-      },
-      size: {
-          value: { min: 1, max: 5 },
-      },
-  },
-  detectRetina: true,
-}} 
-      />
-  )
-}
+          opacity: {
+            value: 0.5,
+          },
+          shape: {
+            type: 'circle',
+          },
+          size: {
+            value: { min: 1, max: 5 },
+          },
+        },
+        detectRetina: true,
+      }}
+    />
+  );
+};
 
-export default Background
+export default Background;
