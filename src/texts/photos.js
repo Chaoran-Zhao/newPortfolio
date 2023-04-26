@@ -12,16 +12,28 @@ export const photos = [
     title: 'Kensington, New South Wales, Australia',
   },
   {
+    src: require('../assets/pic/myphoto5.jpg'),
+    width: 5,
+    height: 3,
+    title: 'Watsons Bay, New South Wales, Australia',
+  },
+  {
     src: require('../assets/pic/myphoto3.jpg'),
     width: 5,
     height: 3,
     title: 'Circular Quay, New South Wales, Australia',
   },
   {
-    src: require('../assets/pic/myphoto5.jpg'),
+    src: require('../assets/pic/myphoto16.jpg'),
     width: 5,
     height: 3,
-    title: 'Watsons Bay, New South Wales, Australia',
+    title: 'Launceston, Tasmania, Australia',
+  },
+  {
+    src: require('../assets/pic/myphoto19.jpg'),
+    width: 5,
+    height: 3,
+    title: 'MONA Museum, Hobart, Tasmania, Australia',
   },
   {
     src: require('../assets/pic/myphoto6.jpg'),
@@ -35,12 +47,12 @@ export const photos = [
     height: 3,
     title: 'Kuala Lumpur, Malaysia',
   },
-  {
-    src: require('../assets/pic/myphoto8.jpg'),
-    width: 5,
-    height: 3,
-    title: 'Singapore',
-  },
+  // {
+  //   src: require('../assets/pic/myphoto8.jpg'),
+  //   width: 5,
+  //   height: 3,
+  //   title: 'Singapore',
+  // },
   {
     src: require('../assets/pic/myphoto9.jpg'),
     width: 5,
@@ -60,6 +72,18 @@ export const photos = [
     title: 'Harbin, China',
   },
   {
+    src: require('../assets/pic/myphoto15.jpg'),
+    width: 4,
+    height: 5,
+    title: 'Hobart, Tasmania, Australia',
+  },
+  {
+    src: require('../assets/pic/myphoto14.jpg'),
+    width: 4,
+    height: 5,
+    title: 'Hobart, Tasmania, Australia',
+  },
+  {
     src: require('../assets/pic/myphoto11.jpg'),
     width: 4,
     height: 5,
@@ -76,5 +100,17 @@ export const photos = [
     width: 4,
     height: 5,
     title: 'Botany, New South Wales, Australia',
+  },
+  {
+    src: require('../assets/pic/myphoto17.jpg'),
+    width: 5,
+    height: 3,
+    title: 'MONA Museum, Hobart, Tasmania, Australia',
+  },
+  {
+    src: require('../assets/pic/myphoto18.jpg'),
+    width: 5,
+    height: 3,
+    title: 'Hobart, Tasmania, Australia',
   },
 ];

@@ -130,6 +130,54 @@ function Photo() {
           'type': 'Point',
           'coordinates': [114.186966, 22.336157]
         }
+      },
+      {
+        'type': 'Feature',
+        'properties': {
+          'message': 'Hobart, Australia',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Hobart.jpg')
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [147.324997, -42.880554]
+        }
+      },
+      {
+        'type': 'Feature',
+        'properties': {
+          'message': 'Devonport, Australia',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Devonport.jpg')
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [146.346390, -41.180557]
+        }
+      },
+      {
+        'type': 'Feature',
+        'properties': {
+          'message': 'Launceston, Australia',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/launceston.jpg')
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [147.157135, -41.429825]
+        }
+      },
+      {
+        'type': 'Feature',
+        'properties': {
+          'message': 'Geelong, Australia',
+          'iconSize': [30, 30],
+          'src': require('../../../assets/City/Geelong.jpg')
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [ 144.36069, -38.14711]
+        }
       }
     ]
   };
