@@ -32,7 +32,7 @@ function Photo() {
 
   mapboxgl.accessToken = 'pk.eyJ1Ijoia2VubmlzIiwiYSI6ImNsZnFpMTcxaTFmcjczc3Bmc3J6a212bnQifQ.-_A5rXbFDvDj7RG3U-umEg';
 
-  const geojson = {
+  const geojson ={
     'type': 'FeatureCollection',
     'features': [
       {
@@ -180,7 +180,7 @@ function Photo() {
         }
       }
     ]
-  };
+  } 
 
   useEffect(() => {
     let mapdiv = document.querySelector('#map');
