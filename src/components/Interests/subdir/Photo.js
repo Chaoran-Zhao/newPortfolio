@@ -29,158 +29,22 @@ function Photo() {
   });
 
 
-
   mapboxgl.accessToken = 'pk.eyJ1Ijoia2VubmlzIiwiYSI6ImNsZnFpMTcxaTFmcjczc3Bmc3J6a212bnQifQ.-_A5rXbFDvDj7RG3U-umEg';
 
-  const geojson ={
-    'type': 'FeatureCollection',
-    'features': [
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Singapore, The Lion City ',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Singapore.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [103.8454, 1.3147]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Bangkok, Thailand',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Bangkok.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [100.50483, 13.75335]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Kuala Lumpur, Malaysia',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Kuala.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [101.6865300, 3.1412000]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Malaka, Malaysia',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Malaka.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [102.2405, 2.1960]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Langkawi, Malaysia',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Langkawi.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [99.78261, 6.373586]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Harbin, China',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Harbin.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [126.63951, 45.75553]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Sydney, Australia',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Sydney.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [151.20695, -33.8696]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Hong Kong, China',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Hongkong.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [114.186966, 22.336157]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Hobart, Australia',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Hobart.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [147.324997, -42.880554]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Devonport, Australia',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Devonport.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [146.346390, -41.180557]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Launceston, Australia',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/launceston.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [147.157135, -41.429825]
-        }
-      },
-      {
-        'type': 'Feature',
-        'properties': {
-          'message': 'Geelong, Australia',
-          'iconSize': [30, 30],
-          'src': require('../../../assets/City/Geelong.jpg')
-        },
-        'geometry': {
-          'type': 'Point',
-          'coordinates': [ 144.36069, -38.14711]
-        }
-      }
-    ]
-  } 
+  const [geojson, setgeojson] = useState(null)
+  useEffect(() => {
+    fetch('https://api.jsonbin.io/v3/b/647ffe748e4aa6225eaa6699')
+      .then(response => response.json())
+      .then(data => {
+        console.log('data',data);
+        setgeojson(data)
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+  },[]); 
+  
 
   useEffect(() => {
     let mapdiv = document.querySelector('#map');
@@ -195,28 +59,37 @@ function Photo() {
       });
 
       // Add markers to the map.
-      for (const marker of geojson.features) {
-        // Create a DOM element for each marker.
-        const el = document.createElement('div');
-        const width = marker.properties.iconSize[0];
-        const height = marker.properties.iconSize[1];
-        el.className = 'marker';
-        el.style.backgroundImage = `url(${marker.properties.src})`;
-        el.style.width = `${width}px`;
-        el.style.height = `${height}px`;
-        el.style.backgroundSize = '100%';
+      if (geojson!== null){
+        for (const marker of geojson.record.features) {
+          console.log('here idsfgaid',marker.properties.src)
+          // Create a DOM element for each marker.
+          const el = document.createElement('div');
+          const width = marker.properties.iconSize[0];
+          const height = marker.properties.iconSize[1];
+          el.className = 'marker';
+          
+          el.style.backgroundImage = `url('${marker.properties.src}')`;
+          
 
-        el.addEventListener('click', () => {
-          window.alert(marker.properties.message);
-        });
+          el.style.width = `${width}px`;
+          el.style.height = `${height}px`;
+          el.style.backgroundSize = '100%';
 
-        // Add markers to the map.
-        new mapboxgl.Marker(el)
-          .setLngLat(marker.geometry.coordinates)
-          .addTo(map);
+          el.addEventListener('click', () => {
+            window.alert(marker.properties.message);
+          });
+
+          // Add markers to the map.
+          new mapboxgl.Marker(el)
+            .setLngLat(marker.geometry.coordinates)
+            .addTo(map);
+        }
+      }else{
+        console.log('no item')
       }
+      
     }
-  }, [rednder]);
+  }, [rednder, geojson]);
 
 
 
