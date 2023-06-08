@@ -1,0 +1,173 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Singapore, The Lion City ",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=1JuiwBQuaig_Jd9hsllVk4tWE43yT41HZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.8454, 1.3147]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Bangkok, Thailand",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=11EMEgll_uo5tTzkYwhKhUPI4s3zjawB2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [100.50483, 13.75335]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Kuala Lumpur, Malaysia",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=1pKDwAdOC-6vWk2JQ68yGbVdAuOGF5k4I"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.68653, 3.1412]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Malaka, Malaysia",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=1G5o0QVsspgkwq16eu6IAaqSZmWS3N-ES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [102.2405, 2.196]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Langkawi, Malaysia",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=1MO5sItrHMK0y3amAjkVsnNaxsUUsTFO3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [99.78261, 6.373586]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Harbin, China",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=168sd3eDAinrVHZ-Tc4KExjDGROqgZEF9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.63951, 45.75553]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Sydney, Australia",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=1LLTyJaS9V17gclJQHsgZzJiTvZCGDUkR"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.20695, -33.8696]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Hong Kong, China",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=1QKPNScjgBsJ5cuiPUC9Pw0zow33hDQ6-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.186966, 22.336157]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Hobart, Australia",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=10Ytt4SOEtwby2bzZfFQEFiOBcI_jjt3B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.324997, -42.880554]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Devonport, Australia",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=1hyTZbR2URXMUDN20VeLkFIOrLGf7UFg8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [146.34639, -41.180557]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Launceston, Australia",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=1Bk7TUDkMJ5TwJpYd-3H4y5qSVFBgfeVN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.157135, -41.429825]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Geelong, Australia",
+        "iconSize": [30, 30],
+        "src": "https://drive.google.com/uc?id=1fUcX6amjwW1AwTsu5DdKVLC5s_nL8wAT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.36069, -38.14711]
+      }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+          "message": "Adelaide, Australia",
+          "iconSize": [30, 30],
+          "src": "https://drive.google.com/uc?id=1nlhKUdMDK5xF8OEEWTwG77AyB6k7sJbN"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [138.6007, -34.9285]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+          "message": "Shanghai, China",
+          "iconSize": [30, 30],
+          "src": "https://drive.google.com/uc?id=1Ktm4UqFDAEOIu-odyMj_xXC9HeNt-8AG"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [121.4737, 31.2304]
+        }
+    }
+  ]
+}

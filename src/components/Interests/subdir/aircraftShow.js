@@ -36,6 +36,9 @@ const AircraftShow = () => {
   {
     image: require('../../../assets/concept.jpg'),
   },
+  {
+    image: require('../../../assets/9.PNG'),
+  },
   ]
 
   return (

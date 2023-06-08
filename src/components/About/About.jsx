@@ -15,6 +15,9 @@ const About = () => {
       </h1>
       <div class="grid-container ">
         <div className="grid-item">
+        <p className="abouttext">
+            <T keyName="about" />
+          </p>
           <p className="abouttext">
             <T keyName="about1" />
           </p>
@@ -25,6 +28,9 @@ const About = () => {
 
           <p className="abouttext">
             <T keyName="about3" />
+          </p>
+          <p className="abouttext">
+            <T keyName="about4" />
           </p>
 
           <TechStack />
